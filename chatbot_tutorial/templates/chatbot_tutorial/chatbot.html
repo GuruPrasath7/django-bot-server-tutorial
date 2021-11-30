@@ -19,6 +19,7 @@
         <base target="_blank"/>
         <title>Websockets Bot</title>
 
+
     </head>
     <body>
         <!-- Wrap all page content here -->
@@ -41,16 +42,11 @@
             <div class="navbar navbar-default navbar-fixed-bottom non-error">
                 <div class="container-fluid botAccentColor" id="bottom-box">
                     
-                    <div class="row" id="send-box">
-                        
-                        <div id="messageToSend" contenteditable="true" class="pull-left" data-ph="Type your message..."></div>
-                        
+                    <div class="row" id="send-box" align="center">
 
-                        <div class="pull-right send-button-div">
-                            <button  id="messageSendButton" type="button" onclick="sendTextMessage()">
-                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                            </button>  
-                        </div>
+                        <button id="messageSendButton" type="button" value="fat" onclick="sendTextMessage(this.value)"> FAT </button>
+                        <button id="messageSendButton" type="button" value="stupid" onclick="sendTextMessage(this.value)"> STUPID </button>
+                        <button id="messageSendButton" type="button" value="dumb" onclick="sendTextMessage(this.value)"> DUMB </button>
 
                     </div>
                     

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+
+<body>
+      <table border = "1" cellpadding = "5" cellspacing = "5" align="center">
+         <tr>
+            <th> Username </th>
+            <th> Fat </th>
+            <th> Stupid </th>
+            <th> Dumb </th>
+         </tr>
+         {% for user in users %}
+          <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.button_history.fat }}</td>
+            <td>{{ user.button_history.stupid }}</td>
+            <td>{{ user.button_history.dumb }}</td>
+          </tr>
+          {% endfor %}
+      </table>
+ </body>
+
+</html>

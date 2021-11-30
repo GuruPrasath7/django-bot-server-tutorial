@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from .views import chat
+from .views import *
 
 urlpatterns = [
-	url(r'^chat/$', chat, name='chat'),
-    url(r'^admin/', admin.site.urls)
+    url(r'^chat/(?P<user_id>[0-9]+)/$', chat, name='chat'),
+    url(r'^signup/$', signup, name='signup'),
+    url(r'^login/$', login, name='login'),
+    url(r'^users-list/', users_list, name='users-list'),
+    url(r'^admin/', admin.site.urls),
+
 ]

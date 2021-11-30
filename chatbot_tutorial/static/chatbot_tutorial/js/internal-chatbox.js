@@ -39,15 +39,22 @@ function processAndDisplayChatMessage(message){
 }
 
 
-function sendTextMessage() {
-    if ($('#messageToSend').text() == "") {
+function sendTextMessage(value) {
+
+    var href_list = window.location.href.split("/")
+    var user_id = href_list.at(-2)
+
+    if (value == "") {
         return
     }
 
     message = {}
-    message.text = $('#messageToSend').html().replace("</div>", "").replace("<div>", "\n").replace("<br>", "\n");
+    message.text = value
+    message.user_id = user_id
     message.command= 'send'
     message.timestamp = new Date();
+
+    console.log(message)
     
     
     $('#messageToSend').text('');
