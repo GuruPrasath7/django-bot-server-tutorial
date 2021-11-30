@@ -29,3 +29,15 @@ And start the server with
 `python manage.py runserver`
 
 You should now be able to go to localhost:8000/chat/ and chat with the bot
+
+
+## Updated changes (User and Button History added):
+
+### Step 1
+Sign up your profile to the application. This can be achieved through `localhost:8000/signup/` API.
+### Step 2
+After the successful signup, login with the credentials and the API route is `localhost:8000/login/`
+### Step 3
+You will be redirected to chat window, and it contains `FAT, STUPID, DUMB` buttons.
+### Step 4
+To view the users list and count of the buttons they hit, use `localhost:8000/users-list/` API.
